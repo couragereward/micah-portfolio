@@ -55,7 +55,20 @@ setTheme(
   false
 );
 
-document.querySelectorAll(".brand").forEach(brand => {
+const brandLinks = [...document.querySelectorAll(".brand")];
+
+function animateBrand(brand) {
+  if (brand.classList.contains("is-animating")) return;
+
+  brand.classList.add("is-animating");
+  brand.setAttribute("aria-expanded", "true");
+  brand.setAttribute(
+    "aria-label",
+    "SKYLOCITY wordmark rolling out; go home"
+  );
+}
+
+brandLinks.forEach(brand => {
   const wordmark = brand.querySelector(".brand-wordmark");
 
   wordmark.addEventListener("animationend", event => {
@@ -69,17 +82,15 @@ document.querySelectorAll(".brand").forEach(brand => {
   brand.addEventListener("click", event => {
     event.preventDefault();
     showPage("home");
-
-    if (brand.classList.contains("is-animating")) return;
-
-    brand.classList.add("is-animating");
-    brand.setAttribute("aria-expanded", "true");
-    brand.setAttribute(
-      "aria-label",
-      "SKYLOCITY wordmark rolling out; go home"
-    );
+    animateBrand(brand);
   });
 });
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  window.setInterval(() => {
+    brandLinks.forEach(animateBrand);
+  }, 10000);
+}
 
 const projectData = {
   sharesat: {
