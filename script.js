@@ -29,6 +29,11 @@ function setTheme(theme, persist = true) {
   const isLight = theme === "light";
 
   document.documentElement.dataset.theme = isLight ? "light" : "dark";
+  document.querySelectorAll(
+    ".brand-logo, .about-logo, .preview-brand-logo, .experience-logo"
+  ).forEach(logo => {
+    logo.src = `images/skylocity-logo-${isLight ? "light" : "dark"}.png`;
+  });
   themeToggle.setAttribute("aria-pressed", String(isLight));
   themeToggle.setAttribute(
     "aria-label",
