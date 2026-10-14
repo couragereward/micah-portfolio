@@ -27,6 +27,7 @@
   --footer-muted: #a2a8ad;
   --contact-muted: #aab0b5;
   --contact-label: #9fa5aa;
+  --social-text: #d1d5d8;
   --input-bg: #12171c;
   --input-label: #d9dcde;
   --input-placeholder: #707980;
@@ -1684,25 +1685,35 @@ h3 {
 
 .social-links > div {
   display: flex;
+  flex-wrap: wrap;
   gap: 9px;
   margin-top: 13px;
 }
 
 .social-links a {
-  display: grid;
-  place-items: center;
-  width: 35px;
-  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 35px;
+  padding: 6px 11px;
   border: 1px solid var(--line);
-  border-radius: 50%;
-  font-size: 11px;
+  border-radius: 20px;
+  color: var(--social-text);
+  font-size: 10px;
   font-weight: 700;
-  transition: color .2s, border-color .2s;
+  transition: color .2s, border-color .2s, background .2s;
 }
 
 .social-links a:hover {
   color: var(--gold);
   border-color: var(--gold);
+  background: rgba(232,184,62,.07);
+}
+
+.social-platform {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: .3px;
 }
 
 .contact-form {
@@ -2343,6 +2354,7 @@ html[data-theme="light"] {
   --footer-muted: #505a62;
   --contact-muted: #505a62;
   --contact-label: #5b656c;
+  --social-text: #303a41;
   --input-bg: #ffffff;
   --input-label: #303a41;
   --input-placeholder: #68737b;
