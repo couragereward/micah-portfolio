@@ -283,6 +283,7 @@ window.addEventListener("popstate", () => {
 
 document.getElementById("downloadResume").addEventListener("click", () => {
   const profile = [
+    "SKYLOCITY",
     "MICAH AGADA",
     "Graphic & UI Designer",
     "Jalingo, Taraba State, Nigeria",
@@ -322,7 +323,7 @@ document.getElementById("downloadResume").addEventListener("click", () => {
   const link = document.createElement("a");
 
   link.href = url;
-  link.download = "Micah-Agada-Profile.txt";
+  link.download = "SKYLOCITY-Micah-Agada-Profile.txt";
   document.body.appendChild(link);
   link.click();
   link.remove();

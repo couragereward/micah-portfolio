@@ -112,21 +112,13 @@ select {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-size: 13px;
-  font-weight: 600;
   white-space: nowrap;
 }
 
-.brand-mark {
-  font-family: var(--display);
-  font-size: 23px;
-  font-weight: 800;
-  letter-spacing: -3px;
-}
-
-.brand-mark span {
-  color: var(--gold);
+.brand-logo {
+  display: block;
+  width: clamp(128px, 12vw, 158px);
+  height: auto;
 }
 
 .navigation {
@@ -546,18 +538,12 @@ h3 {
   height: 220px;
 }
 
-.about-monogram {
-  font-family: var(--display);
-  font-size: clamp(100px, 14vw, 170px);
-  font-weight: 800;
-  letter-spacing: -14px;
-  color: #f4f0e8;
+.about-logo {
   position: relative;
   z-index: 1;
-}
-
-.about-monogram span {
-  color: var(--gold);
+  display: block;
+  width: min(75%, 320px);
+  height: auto;
 }
 
 .about-art-bottom {
@@ -1333,14 +1319,10 @@ h3 {
   justify-content: space-between;
 }
 
-.preview-mark {
-  font-family: var(--display);
-  font-size: 25px;
-  font-weight: 800;
-}
-
-.preview-mark span {
-  color: var(--gold);
+.preview-brand-logo {
+  display: block;
+  width: min(100%, 160px);
+  height: auto;
 }
 
 .preview-word {
@@ -1417,16 +1399,10 @@ h3 {
   align-self: start;
 }
 
-.experience-mark {
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: 48px;
-  letter-spacing: -5px;
-  color: #191d20;
-}
-
-.experience-mark::first-letter {
-  color: #ad842e;
+.experience-logo {
+  display: block;
+  width: min(100%, 190px);
+  height: auto;
 }
 
 .experience-intro h3 {
@@ -1746,9 +1722,21 @@ h3 {
 }
 
 .contact-signature {
+  display: flex;
+  flex-direction: column;
   font-family: var(--display);
   font-size: 19px;
   font-weight: 800;
+  line-height: 1.25;
+}
+
+.contact-signature small {
+  margin-top: 4px;
+  color: var(--contact-label);
+  font-family: var(--font);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .2px;
 }
 
 .contact-signature span {
@@ -1777,8 +1765,8 @@ h3 {
   color: var(--text);
 }
 
-.footer-brand .brand-mark {
-  font-size: 20px;
+.footer .brand-logo {
+  width: clamp(120px, 11vw, 145px);
 }
 
 #backToTop {
@@ -2011,10 +1999,6 @@ h3 {
     min-height: 290px;
   }
 
-  .about-monogram {
-    font-size: 125px;
-  }
-
   .about-copy h3 {
     font-size: 21px;
   }
@@ -2129,7 +2113,11 @@ h3 {
 
 @media (max-width: 440px) {
   .brand {
-    font-size: 12px;
+    gap: 0;
+  }
+
+  .header .brand-logo {
+    width: 132px;
   }
 
   .hero-copy h1 {
@@ -2223,6 +2211,10 @@ h3 {
 
   .footer {
     flex-wrap: wrap;
+  }
+
+  .footer .brand-logo {
+    width: 120px;
   }
 
   .footer > span {
