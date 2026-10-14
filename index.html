@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0d10">
+  <meta name="description" content="Micah Agada is a graphic and UI/UX designer based in Jalingo, Taraba State, Nigeria.">
+  <title>Micah Agada — Graphic & UI Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="header">
+      <a href="#home" class="brand" aria-label="Micah Agada home">
+        <span class="brand-mark">M<span>A</span></span>
+        <span>Micah Agada</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navigation" id="navigation">
+        <a href="#home" data-page="home" class="nav-link active">Home</a>
+        <a href="#about" data-page="about" class="nav-link">About</a>
+        <a href="#services" data-page="services" class="nav-link">Services</a>
+        <a href="#projects" data-page="projects" class="nav-link">Projects</a>
+        <a href="#experience" data-page="experience" class="nav-link">Experience</a>
+        <a href="#contact" data-page="contact" class="nav-link">Contact</a>
+        <a href="#contact" data-page="contact" class="hire-button">Hire Me <span>↗</span></a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☼</span>
+          <span class="theme-label">Light mode</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page hero-page active" id="home" data-view="home">
+        <div class="hero-copy">
+          <p class="hero-kicker">GRAPHIC & UI DESIGNER</p>
+          <h1>Designing with <span>clarity.</span><br>Creating with purpose.</h1>
+          <p class="hero-description">I'm Micah Agada. I build thoughtful brand identities and intuitive digital experiences that make ideas easier to understand.</p>
+          <div class="hero-actions">
+            <a href="#projects" data-page="projects" class="button button-gold">Explore my work <span>↗</span></a>
+            <a href="#contact" data-page="contact" class="button button-outline">Let's talk <span>→</span></a>
+          </div>
+          <div class="hero-meta">
+            <span><span class="meta-icon">⌖</span> Jalingo, Taraba State</span>
+            <span>Open to opportunities</span>
+          </div>
+          <div class="hero-index"><span>01</span> / 06 <span class="index-line"></span> PORTFOLIO 2026</div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-glow"></div>
+          <div class="portrait-frame">
+            <img class="portrait-image" src="images/micah-agada.png" alt="Micah Agada in a black suit">
+            <div class="portrait-caption"><span>CREATIVE THINKER</span><span>BASED IN NIGERIA</span></div>
+          </div>
+          <div class="floating-note note-top"><span class="note-symbol">✳</span><span>Purposeful<br>design</span></div>
+          <div class="floating-note note-bottom"><span class="note-number">02+</span><span>Years of<br>experience</span></div>
+          <div class="vertical-label">STRATEGY · IDENTITY · EXPERIENCE</div>
+        </div>
+      </section>
+
+      <section class="page light-page" id="about" data-view="about">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark-eyebrow">A LITTLE ABOUT ME</p>
+            <h2>Design is more than<br>aesthetics. It's <span class="gold-text">purpose.</span></h2>
+          </div>
+          <span class="section-number">01 / ABOUT</span>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-art">
+            <div class="about-monogram">M<span>A</span></div>
+            <div class="about-art-bottom"><span>THOUGHTFUL BY DESIGN</span><span>JALINGO, NG</span></div>
+          </div>
+          <div class="about-copy">
+            <h3>Hello, I'm Micah.</h3>
+            <p>I'm a graphic and UI designer based in Jalingo, Taraba State, Nigeria. I create clean, modern visual designs that help brands stand out and digital experiences feel simple and enjoyable.</p>
+            <p>I believe in clarity, consistency, and purpose in every project I take on. From shaping a brand's identity to designing a digital product, my goal is to turn ideas into thoughtful visual experiences.</p>
+            <div class="principles">
+              <div><span>01</span><strong>Clarity</strong><p>Making complex ideas feel simple.</p></div>
+              <div><span>02</span><strong>Consistency</strong><p>Building cohesive visual systems.</p></div>
+              <div><span>03</span><strong>Purpose</strong><p>Designing with people in mind.</p></div>
+            </div>
+            <button class="button button-dark" id="downloadResume">Download profile <span>↓</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page dark-page" id="services" data-view="services">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">WHAT I BRING TO THE TABLE</p>
+            <h2>Good ideas.<br><span class="gold-text">Thoughtfully executed.</span></h2>
+          </div>
+          <span class="section-number">02 / SERVICES</span>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card"><span class="service-number">01</span><div class="service-icon">⌘</div><h3>UI/UX Design</h3><p>Intuitive interfaces, user flows and digital product experiences built around people.</p><a href="#contact" data-page="contact" class="text-link">Discuss a project ↗</a></article>
+          <article class="service-card"><span class="service-number">02</span><div class="service-icon">✳</div><h3>Graphic Design</h3><p>Distinctive visuals and communication materials that make your message stand out.</p><a href="#contact" data-page="contact" class="text-link">Discuss a project ↗</a></article>
+          <article class="service-card"><span class="service-number">03</span><div class="service-icon">◈</div><h3>Brand Consultation</h3><p>Creative direction and practical guidance for a consistent, recognizable brand.</p><a href="#contact" data-page="contact" class="text-link">Discuss a project ↗</a></article>
+          <article class="service-card"><span class="service-number">04</span><div class="service-icon">▧</div><h3>Content Creation</h3><p>Purposeful visual content for digital platforms, campaigns and audiences.</p><a href="#contact" data-page="contact" class="text-link">Discuss a project ↗</a></article>
+          <article class="service-card"><span class="service-number">05</span><div class="service-icon">▷</div><h3>Video Editing</h3><p>Clean edits for promotional videos, social media and brand storytelling.</p><a href="#contact" data-page="contact" class="text-link">Discuss a project ↗</a></article>
+          <article class="service-card"><span class="service-number">06</span><div class="service-icon">↗</div><h3>Project Management</h3><p>Organized creative delivery from the first brief through final assets.</p><a href="#contact" data-page="contact" class="text-link">Discuss a project ↗</a></article>
+        </div>
+        <div class="section-bottom"><span>ONE PARTNER. MULTIPLE CREATIVE NEEDS.</span><a href="#projects" data-page="projects" class="text-link">See selected work ↗</a></div>
+      </section>
+
+      <section class="page light-page projects-page" id="projects" data-view="projects">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark-eyebrow">SELECTED CREATIVE WORK</p>
+            <h2>Ideas made <span class="gold-text">visible.</span></h2>
+            <p class="section-description">A selection of digital product concepts, visual communication and brand identity work.</p>
+          </div>
+          <span class="section-number">03 / PROJECTS</span>
+        </div>
+
+        <div class="project-filters" id="projectFilters">
+          <button class="filter-button active" data-filter="all">All work <span>04</span></button>
+          <button class="filter-button" data-filter="uiux">UI/UX</button>
+          <button class="filter-button" data-filter="graphic">Graphic design</button>
+          <button class="filter-button" data-filter="brand">Brand identity</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card" data-category="uiux">
+            <button class="project-art sharesat-art" data-project="sharesat" aria-label="View Sharesat Application project">
+              <span class="art-label">FINTECH / DIGITAL PRODUCT</span>
+              <div class="phone-mockup phone-one"><div class="phone-notch"></div><div class="mockup-brand">sharesat<span>.</span></div><div class="mockup-balance">Total balance <strong>$12,840.50</strong></div><div class="mockup-chart"></div><div class="mockup-row"></div><div class="mockup-row short"></div><div class="mockup-action">Send money ↗</div></div>
+              <div class="phone-mockup phone-two"><div class="phone-notch"></div><div class="mockup-brand">Transfer</div><div class="mockup-avatar">JD</div><div class="mockup-row"></div><div class="mockup-row short"></div><div class="mockup-action">Confirm transfer</div></div>
+              <span class="art-index">01</span>
+            </button>
+            <div class="project-info"><div><p class="project-category">UI/UX · FINTECH</p><h3>Sharesat Application</h3><p class="project-summary">A crypto transaction concept inspired by the simplicity of messaging.</p></div><button class="round-arrow" data-project="sharesat" aria-label="Open Sharesat project">↗</button></div>
+          </article>
+
+          <article class="project-card" data-category="uiux">
+            <button class="project-art momentum-art" data-project="momentum" aria-label="View Momentum Platform project">
+              <span class="art-label">EVENTS / COMMUNITY</span>
+              <div class="momentum-window"><span class="momentum-logo">m.</span><span class="momentum-top">FIND YOUR PEOPLE.</span><strong>Good things<br>happen when<br>we <i>connect.</i></strong><div class="momentum-pills"><span>Design</span><span>Technology</span><span>Community</span></div></div>
+              <div class="attendee-card"><span class="attendee-avatar">A</span><span class="attendee-avatar avatar-two">J</span><span class="attendee-avatar avatar-three">M</span><small>Meet your community</small></div>
+              <span class="art-index">02</span>
+            </button>
+            <div class="project-info"><div><p class="project-category">UI/UX · EVENTS</p><h3>Momentum Platform</h3><p class="project-summary">An event networking concept connecting attendees before event day.</p></div><button class="round-arrow" data-project="momentum" aria-label="Open Momentum project">↗</button></div>
+          </article>
+
+          <article class="project-card" data-category="graphic">
+            <button class="project-art northstar-art" data-project="northstar" aria-label="View Northstar Carousel project">
+              <span class="art-label">SOCIAL MEDIA / CAMPAIGN</span>
+              <div class="northstar-content"><span class="northstar-symbol">✳</span><span class="northstar-brand">NORTHSTAR</span><h3>Make your<br>brand <i>matter.</i></h3><div class="northstar-lines"></div><span class="northstar-footer">CREATIVE THAT CONNECTS.</span></div>
+              <div class="carousel-tile tile-two">STORIES<br>THAT STICK.</div>
+              <span class="art-index">03</span>
+            </button>
+            <div class="project-info"><div><p class="project-category">GRAPHIC DESIGN · SOCIAL</p><h3>Northstar Carousel</h3><p class="project-summary">Social media carousel concept for clear, engaging brand storytelling.</p></div><button class="round-arrow" data-project="northstar" aria-label="Open Northstar project">↗</button></div>
+          </article>
+
+          <article class="project-card" data-category="brand">
+            <button class="project-art tuntac-art" data-project="tuntac" aria-label="View Tuntac Brand Guideline project">
+              <span class="art-label">BRAND IDENTITY / GUIDELINES</span>
+              <div class="brand-paper"><span class="tuntac-symbol">T.</span><span class="tuntac-name">TUNTAC</span><span class="tuntac-sub">BRAND GUIDELINES</span><div class="brand-swatches"><i></i><i></i><i></i><i></i></div><span class="brand-paper-footer">IDENTITY · TYPE · COLOUR</span></div>
+              <div class="brand-paper-small"><span class="tuntac-symbol">T.</span><div class="brand-small-lines"></div><div class="brand-swatches"><i></i><i></i><i></i></div></div>
+              <span class="art-index">04</span>
+            </button>
+            <div class="project-info"><div><p class="project-category">BRAND IDENTITY</p><h3>Tuntac Brand Guideline</h3><p class="project-summary">A brand identity guideline concept for consistent visual communication.</p></div><button class="round-arrow" data-project="tuntac" aria-label="Open Tuntac project">↗</button></div>
+          </article>
+        </div>
+        <p class="portfolio-note">Project visuals are illustrative previews. Replace them with Micah's original work and prototype links before publishing.</p>
+        <div class="section-bottom"><span>GOOD WORK STARTS WITH A CONVERSATION.</span><a href="#contact" data-page="contact" class="text-link">Start a project ↗</a></div>
+      </section>
+
+      <section class="page dark-page detail-page" id="projectDetail" data-view="detail">
+        <button class="back-link" id="backToProjects">← Back to projects</button>
+        <div class="detail-hero">
+          <div class="detail-copy"><p class="eyebrow" id="detailCategory">UI/UX · FINTECH</p><h2 id="detailTitle">Sharesat Application</h2><p id="detailDescription">A crypto transaction app concept that makes transfers feel as simple and seamless as sending a message.</p><div class="detail-tags" id="detailTags"><span>UI/UX</span><span>Fintech</span><span>Product design</span></div><a href="#contact" data-page="contact" class="button button-gold">Discuss a similar project ↗</a></div>
+          <div class="detail-preview" id="detailPreview"><div class="detail-preview-inner"><span class="preview-mark">MA<span>.</span></span><span class="preview-word">DESIGN<br>WITH PURPOSE.</span><span class="preview-index">SELECTED WORK / 2026</span></div></div>
+        </div>
+        <div class="detail-columns"><article><span class="detail-label">THE IDEA</span><h3 id="detailProblemTitle">The challenge</h3><p id="detailProblem">Make a digital transaction experience feel straightforward, familiar and approachable.</p></article><article><span class="detail-label">THE APPROACH</span><h3 id="detailSolutionTitle">The design direction</h3><p id="detailSolution">Explore a clear hierarchy, accessible controls and a streamlined journey from one action to the next.</p></article><article><span class="detail-label">THE DISCIPLINE</span><h3>My contribution</h3><p id="detailRole">UI/UX concept, interface exploration and visual direction.</p></article></div>
+        <div class="detail-footer"><span>WANT TO BUILD SOMETHING SIMILAR?</span><a href="#contact" data-page="contact" class="text-link">Let's work together ↗</a></div>
+      </section>
+
+      <section class="page light-page experience-page" id="experience" data-view="experience">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark-eyebrow">MY CREATIVE JOURNEY</p>
+            <h2>Growing through<br><span class="gold-text">meaningful work.</span></h2>
+            <p class="section-description">Volunteer design experience, collaboration and an ongoing commitment to learning.</p>
+          </div>
+          <span class="section-number">04 / EXPERIENCE</span>
+        </div>
+
+        <div class="experience-layout">
+          <div class="experience-intro"><span class="experience-mark">MA.</span><h3>Thoughtful work.<br>Better with every project.</h3><p>Every collaboration is an opportunity to communicate more clearly, solve problems creatively and grow as a designer.</p><a href="#contact" data-page="contact" class="text-link">Collaborate with me ↗</a></div>
+          <div class="timeline">
+            <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-top"><span class="timeline-type">VOLUNTEER EXPERIENCE</span><span class="timeline-date">DATES TO BE CONFIRMED</span></div><h3>Designer, Northstar</h3><p class="timeline-role">Volunteer Designer</p><p>Contributed visual design concepts for social media communication and brand awareness campaigns.</p><div class="timeline-tags"><span>Graphic design</span><span>Social media</span><span>Visual communication</span></div></article>
+            <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-top"><span class="timeline-type">VOLUNTEER EXPERIENCE</span><span class="timeline-date">DATES TO BE CONFIRMED</span></div><h3>Sandlip</h3><p class="timeline-role">Volunteer Designer</p><p>Supported creative communication through visual assets for digital platforms and campaigns.</p><div class="timeline-tags"><span>Design</span><span>Creative collaboration</span></div></article>
+          </div>
+        </div>
+
+        <div class="skills-section"><p class="eyebrow dark-eyebrow">MY CREATIVE TOOLKIT</p><div class="skills-list"><span>UI/UX Design</span><span>Visual Design</span><span>Brand Identity</span><span>Wireframing</span><span>Prototyping</span><span>Content Creation</span><span>Video Editing</span><span>Creative Direction</span></div></div>
+      </section>
+
+      <section class="page contact-page" id="contact" data-view="contact">
+        <div class="contact-heading"><p class="eyebrow">HAVE A GOOD IDEA?</p><h2>Let's make<br>something <span class="gold-text">matter.</span></h2><p>Have a project in mind, a collaboration to discuss, or just want to say hello? I'd love to hear from you.</p></div>
+        <div class="contact-layout">
+          <div class="contact-details">
+            <a href="mailto:micahagada8@gmail.com" class="contact-item"><span class="contact-icon">✉</span><span><small>EMAIL ME</small><strong>micahagada8@gmail.com</strong></span><span class="contact-arrow">↗</span></a>
+            <a href="tel:+2348148606250" class="contact-item"><span class="contact-icon">⌕</span><span><small>CALL ME</small><strong>+234 814 860 6250</strong></span><span class="contact-arrow">↗</span></a>
+            <div class="contact-item"><span class="contact-icon">⌖</span><span><small>FIND ME</small><strong>Jalingo, Taraba State, Nigeria</strong></span></div>
+            <div class="social-links"><span>FIND ME ONLINE</span><div><a href="https://www.behance.net/" target="_blank" rel="noreferrer">Be</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">in</a><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">ig</a></div></div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-heading"><span>01 — LET'S TALK</span><span>ALL FIELDS REQUIRED</span></div>
+            <label for="name">Your name</label><input id="name" name="name" type="text" placeholder="How should I address you?" required>
+            <label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required>
+            <label for="service">What do you need?</label><select id="service" name="service" required><option value="">Choose a service</option><option>UI/UX Design</option><option>Graphic Design</option><option>Brand Consultation</option><option>Content Creation</option><option>Video Editing</option><option>Project Management</option><option>Something else</option></select>
+            <label for="message">Tell me about your project</label><textarea id="message" name="message" rows="4" placeholder="A little about your idea, goals and timeline..." required></textarea>
+            <button type="submit" class="button button-gold submit-button">Prepare email <span>↗</span></button>
+            <p class="form-note" id="formNote">Your email app will open with your message ready to send.</p>
+          </form>
+        </div>
+        <div class="contact-bottom"><span class="contact-signature">Micah Agada<span>.</span></span><span>CLARITY. CONSISTENCY. PURPOSE.</span></div>
+      </section>
+    </main>
+
+    <footer class="footer"><a href="#home" class="brand footer-brand"><span class="brand-mark">M<span>A</span></span><span>Micah Agada</span></a><span>© <span id="year">2026</span> Micah Agada</span><button id="backToTop" aria-label="Back to home">↑</button></footer>
+  </div>
+</body>
+</html>
