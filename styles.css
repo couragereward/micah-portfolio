@@ -157,6 +157,33 @@ select {
   transform: translateX(0);
 }
 
+.brand.is-animating .brand-wordmark {
+  transition: none;
+  animation: brand-wordmark-rollout 3.6s cubic-bezier(.22,.75,.25,1) both;
+}
+
+@keyframes brand-wordmark-rollout {
+  0% {
+    max-width: 0;
+    margin-left: 0;
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+  34%,
+  66% {
+    max-width: 150px;
+    margin-left: 8px;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    max-width: 0;
+    margin-left: 0;
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+}
+
 .brand:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 4px;

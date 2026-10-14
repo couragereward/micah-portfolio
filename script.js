@@ -56,12 +56,27 @@ setTheme(
 );
 
 document.querySelectorAll(".brand").forEach(brand => {
-  brand.addEventListener("click", () => {
-    const isExpanded = brand.getAttribute("aria-expanded") !== "true";
-    brand.setAttribute("aria-expanded", String(isExpanded));
+  const wordmark = brand.querySelector(".brand-wordmark");
+
+  wordmark.addEventListener("animationend", event => {
+    if (event.animationName !== "brand-wordmark-rollout") return;
+
+    brand.classList.remove("is-animating");
+    brand.setAttribute("aria-expanded", "false");
+    brand.setAttribute("aria-label", "Animate SKYLOCITY logo and go home");
+  });
+
+  brand.addEventListener("click", event => {
+    event.preventDefault();
+    showPage("home");
+
+    if (brand.classList.contains("is-animating")) return;
+
+    brand.classList.add("is-animating");
+    brand.setAttribute("aria-expanded", "true");
     brand.setAttribute(
       "aria-label",
-      `${isExpanded ? "Hide" : "Show"} SKYLOCITY wordmark and go home`
+      "SKYLOCITY wordmark rolling out; go home"
     );
   });
 });
