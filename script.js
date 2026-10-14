@@ -43,7 +43,7 @@ function setTheme(theme, persist = true) {
   themeToggle.querySelector(".theme-icon").textContent = isLight ? "☾" : "☼";
   themeToggle.querySelector(".theme-label").textContent =
     `${isLight ? "Dark" : "Light"} mode`;
-  themeMeta.content = isLight ? "#f4f5f6" : "#0a0d10";
+  themeMeta.content = isLight ? "#f5f4f0" : "#171816";
 
   if (persist) {
     saveTheme(isLight ? "light" : "dark");
@@ -51,46 +51,29 @@ function setTheme(theme, persist = true) {
 }
 
 setTheme(
-  readSavedTheme() === "light" ? "light" : "dark",
+  readSavedTheme() === "dark" ? "dark" : "light",
   false
 );
 
 const brandLinks = [...document.querySelectorAll(".brand")];
-
-function animateBrand(brand) {
-  if (brand.classList.contains("is-animating")) return;
-
-  brand.classList.add("is-animating");
-  brand.setAttribute("aria-expanded", "true");
-  brand.setAttribute(
-    "aria-label",
-    "SKYLOCITY wordmark rolling out; go home"
-  );
-}
+const heroTitle = document.querySelector(".hero-title");
 
 brandLinks.forEach(brand => {
-  const wordmark = brand.querySelector(".brand-wordmark");
-
-  wordmark.addEventListener("animationend", event => {
-    if (event.animationName !== "brand-wordmark-rollout") return;
-
-    brand.classList.remove("is-animating");
-    brand.setAttribute("aria-expanded", "false");
-    brand.setAttribute("aria-label", "Animate SKYLOCITY logo and go home");
-  });
-
   brand.addEventListener("click", event => {
     event.preventDefault();
     showPage("home");
-    animateBrand(brand);
   });
 });
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  window.setInterval(() => {
-    brandLinks.forEach(animateBrand);
-  }, 10000);
+function replayHeroTitle() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  heroTitle.classList.remove("is-revealing");
+  void heroTitle.offsetWidth;
+  heroTitle.classList.add("is-revealing");
 }
+
+replayHeroTitle();
 
 const projectData = {
   sharesat: {
@@ -175,6 +158,7 @@ function showPage(pageName, updateHistory = true) {
 
   if (pageName === currentPage) {
     closeMenu();
+    if (pageName === "home") replayHeroTitle();
     return;
   }
 
@@ -196,6 +180,7 @@ function showPage(pageName, updateHistory = true) {
 
   updateNavigation(pageName === "detail" ? "projects" : pageName);
   closeMenu();
+  if (pageName === "home") replayHeroTitle();
 
   if (updateHistory) {
     history.pushState({ page: pageName }, "", `#${pageName}`);

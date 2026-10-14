@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0a0d10">
+  <meta name="theme-color" content="#f5f4f0">
   <meta name="description" content="SKYLOCITY is the creative portfolio of Micah Agada, a graphic and UI/UX designer based in Jalingo, Taraba State, Nigeria.">
   <title>SKYLOCITY — Creative Portfolio by Micah Agada</title>
   <link rel="icon" type="image/png" href="images/skylocity-symbol-dark.png">
@@ -29,9 +29,8 @@
 <body>
   <div class="site-shell">
     <header class="header">
-      <a href="#home" class="brand" aria-label="Animate SKYLOCITY logo and go home" aria-expanded="false">
-        <img class="brand-symbol" src="images/skylocity-symbol-dark.png" alt="">
-        <span class="brand-wordmark" aria-hidden="true">SKYLOCITY</span>
+      <a href="#home" class="brand" aria-label="SKYLOCITY home">
+        <img class="brand-logo" src="images/skylocity-logo-light.png" alt="SKYLOCITY">
       </a>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -47,18 +46,21 @@
         <a href="#experience" data-page="experience" class="nav-link">Experience</a>
         <a href="#contact" data-page="contact" class="nav-link">Contact</a>
         <a href="#contact" data-page="contact" class="hire-button">Hire Me <span>↗</span></a>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
-          <span class="theme-icon" aria-hidden="true">☼</span>
-          <span class="theme-label">Light mode</span>
-        </button>
       </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+        <span class="theme-label">Dark mode</span>
+      </button>
     </header>
 
     <main>
       <section class="page hero-page active" id="home" data-view="home">
         <div class="hero-copy">
-          <p class="hero-kicker">SKYLOCITY · GRAPHIC & UI DESIGN</p>
-          <h1>Designing with <span>clarity.</span><br>Creating with purpose.</h1>
+          <p class="hero-kicker">GRAPHIC & DIGITAL DESIGN · JALINGO, NIGERIA</p>
+          <h1 class="hero-title" aria-label="Designing with clarity. Creating with purpose.">
+            <span class="hero-title-line"><span>Designing with <em>clarity.</em></span></span>
+            <span class="hero-title-line"><span>Creating with <em>purpose.</em></span></span>
+          </h1>
           <p class="hero-description">I'm Micah Agada. I build thoughtful brand identities and intuitive digital experiences that make ideas easier to understand.</p>
           <div class="hero-actions">
             <a href="#projects" data-page="projects" class="button button-gold">Explore my work <span>↗</span></a>
@@ -68,18 +70,13 @@
             <span><span class="meta-icon">⌖</span> Jalingo, Taraba State</span>
             <span>Open to opportunities</span>
           </div>
-          <div class="hero-index"><span>01</span> / 06 <span class="index-line"></span> PORTFOLIO 2026</div>
         </div>
 
         <div class="hero-visual">
-          <div class="hero-glow"></div>
           <div class="portrait-frame">
-            <img class="portrait-image" src="images/micah-agada.png" alt="Micah Agada wearing a red polo shirt, cap, and round sunglasses">
-            <div class="portrait-caption"><span>CREATIVE THINKER</span><span>BASED IN NIGERIA</span></div>
+            <img class="portrait-image" src="images/micah-agada.png" alt="Micah Agada in a black suit">
+            <div class="portrait-caption"><span>MICAH AGADA</span><span>DESIGNER</span></div>
           </div>
-          <div class="floating-note note-top"><span class="note-symbol">✳</span><span>Purposeful<br>design</span></div>
-          <div class="floating-note note-bottom"><span class="note-number">02+</span><span>Years of<br>experience</span></div>
-          <div class="vertical-label">STRATEGY · IDENTITY · EXPERIENCE</div>
         </div>
       </section>
 
@@ -151,7 +148,8 @@
         <div class="projects-grid">
           <article class="project-card" data-category="uiux">
             <button class="project-art sharesat-art" data-project="sharesat" aria-label="View Sharesat Application project">
-              <span class="art-label">FINTECH / DIGITAL PRODUCT</span>
+              <span class="art-label">CONCEPT STUDY · FINTECH</span>
+              <span class="art-title">Sharesat</span>
               <div class="phone-mockup phone-one"><div class="phone-notch"></div><div class="mockup-brand">sharesat<span>.</span></div><div class="mockup-balance">Total balance <strong>$12,840.50</strong></div><div class="mockup-chart"></div><div class="mockup-row"></div><div class="mockup-row short"></div><div class="mockup-action">Send money ↗</div></div>
               <div class="phone-mockup phone-two"><div class="phone-notch"></div><div class="mockup-brand">Transfer</div><div class="mockup-avatar">JD</div><div class="mockup-row"></div><div class="mockup-row short"></div><div class="mockup-action">Confirm transfer</div></div>
               <span class="art-index">01</span>
@@ -161,7 +159,8 @@
 
           <article class="project-card" data-category="uiux">
             <button class="project-art momentum-art" data-project="momentum" aria-label="View Momentum Platform project">
-              <span class="art-label">EVENTS / COMMUNITY</span>
+              <span class="art-label">CONCEPT STUDY · COMMUNITY</span>
+              <span class="art-title">Momentum</span>
               <div class="momentum-window"><span class="momentum-logo">m.</span><span class="momentum-top">FIND YOUR PEOPLE.</span><strong>Good things<br>happen when<br>we <i>connect.</i></strong><div class="momentum-pills"><span>Design</span><span>Technology</span><span>Community</span></div></div>
               <div class="attendee-card"><span class="attendee-avatar">A</span><span class="attendee-avatar avatar-two">J</span><span class="attendee-avatar avatar-three">M</span><small>Meet your community</small></div>
               <span class="art-index">02</span>
@@ -171,7 +170,8 @@
 
           <article class="project-card" data-category="graphic">
             <button class="project-art northstar-art" data-project="northstar" aria-label="View Northstar Carousel project">
-              <span class="art-label">SOCIAL MEDIA / CAMPAIGN</span>
+              <span class="art-label">CONCEPT STUDY · CAMPAIGN</span>
+              <span class="art-title">Northstar</span>
               <div class="northstar-content"><span class="northstar-symbol">✳</span><span class="northstar-brand">NORTHSTAR</span><h3>Make your<br>brand <i>matter.</i></h3><div class="northstar-lines"></div><span class="northstar-footer">CREATIVE THAT CONNECTS.</span></div>
               <div class="carousel-tile tile-two">STORIES<br>THAT STICK.</div>
               <span class="art-index">03</span>
@@ -181,7 +181,8 @@
 
           <article class="project-card" data-category="brand">
             <button class="project-art tuntac-art" data-project="tuntac" aria-label="View Tuntac Brand Guideline project">
-              <span class="art-label">BRAND IDENTITY / GUIDELINES</span>
+              <span class="art-label">CONCEPT STUDY · BRAND IDENTITY</span>
+              <span class="art-title">Tuntac</span>
               <div class="brand-paper"><span class="tuntac-symbol">T.</span><span class="tuntac-name">TUNTAC</span><span class="tuntac-sub">BRAND GUIDELINES</span><div class="brand-swatches"><i></i><i></i><i></i><i></i></div><span class="brand-paper-footer">IDENTITY · TYPE · COLOUR</span></div>
               <div class="brand-paper-small"><span class="tuntac-symbol">T.</span><div class="brand-small-lines"></div><div class="brand-swatches"><i></i><i></i><i></i></div></div>
               <span class="art-index">04</span>
@@ -189,7 +190,7 @@
             <div class="project-info"><div><p class="project-category">BRAND IDENTITY</p><h3>Tuntac Brand Guideline</h3><p class="project-summary">A brand identity guideline concept for consistent visual communication.</p></div><button class="round-arrow" data-project="tuntac" aria-label="Open Tuntac project">↗</button></div>
           </article>
         </div>
-        <p class="portfolio-note">Project visuals are illustrative previews. Replace them with Micah's original work and prototype links before publishing.</p>
+        <p class="portfolio-note">Selected concept studies across digital products, visual communication, and brand identity.</p>
         <div class="section-bottom"><span>GOOD WORK STARTS WITH A CONVERSATION.</span><a href="#contact" data-page="contact" class="text-link">Start a project ↗</a></div>
       </section>
 
@@ -216,8 +217,8 @@
         <div class="experience-layout">
           <div class="experience-intro"><img class="experience-logo" src="images/skylocity-logo-dark.png" alt="SKYLOCITY"><h3>Thoughtful work.<br>Better with every project.</h3><p>Every collaboration is an opportunity to communicate more clearly, solve problems creatively and grow as a designer.</p><a href="#contact" data-page="contact" class="text-link">Collaborate with me ↗</a></div>
           <div class="timeline">
-            <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-top"><span class="timeline-type">VOLUNTEER EXPERIENCE</span><span class="timeline-date">DATES TO BE CONFIRMED</span></div><h3>Designer, Northstar</h3><p class="timeline-role">Volunteer Designer</p><p>Contributed visual design concepts for social media communication and brand awareness campaigns.</p><div class="timeline-tags"><span>Graphic design</span><span>Social media</span><span>Visual communication</span></div></article>
-            <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-top"><span class="timeline-type">VOLUNTEER EXPERIENCE</span><span class="timeline-date">DATES TO BE CONFIRMED</span></div><h3>Sandlip</h3><p class="timeline-role">Volunteer Designer</p><p>Supported creative communication through visual assets for digital platforms and campaigns.</p><div class="timeline-tags"><span>Design</span><span>Creative collaboration</span></div></article>
+            <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-top"><span class="timeline-type">VOLUNTEER EXPERIENCE</span></div><h3>Designer, Northstar</h3><p class="timeline-role">Volunteer Designer</p><p>Contributed visual design concepts for social media communication and brand awareness campaigns.</p><div class="timeline-tags"><span>Graphic design</span><span>Social media</span><span>Visual communication</span></div></article>
+            <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-top"><span class="timeline-type">VOLUNTEER EXPERIENCE</span></div><h3>Sandlip</h3><p class="timeline-role">Volunteer Designer</p><p>Supported creative communication through visual assets for digital platforms and campaigns.</p><div class="timeline-tags"><span>Design</span><span>Creative collaboration</span></div></article>
           </div>
         </div>
 
@@ -256,7 +257,7 @@
       </section>
     </main>
 
-    <footer class="footer"><a href="#home" class="brand footer-brand" aria-label="Animate SKYLOCITY logo and go home" aria-expanded="false"><img class="brand-symbol" src="images/skylocity-symbol-dark.png" alt=""><span class="brand-wordmark" aria-hidden="true">SKYLOCITY</span></a><span>© <span id="year">2026</span> SKYLOCITY · Micah Agada</span><button id="backToTop" aria-label="Back to home">↑</button></footer>
+    <footer class="footer"><a href="#home" class="brand footer-brand" aria-label="SKYLOCITY home"><img class="brand-logo" src="images/skylocity-logo-light.png" alt="SKYLOCITY"></a><span>© <span id="year">2026</span> SKYLOCITY · Micah Agada</span><button id="backToTop" aria-label="Back to home">↑</button></footer>
   </div>
 </body>
 </html>
