@@ -2737,25 +2737,6 @@ body {
   animation: design-selection-frame 4s ease-out infinite;
 }
 
-.hero-selection-label {
-  position: absolute;
-  z-index: 3;
-  top: -27px;
-  right: -12px;
-  padding: 2px 6px;
-  background: var(--gold);
-  color: #171817;
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: .04em;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.hero-title-stage.is-revealing .hero-selection-label {
-  animation: design-selection-label 4s ease-out infinite;
-}
-
 .hero-selection-handle {
   position: absolute;
   z-index: 3;
@@ -2801,19 +2782,6 @@ body {
   100% {
     opacity: 0;
     transform: scale(1);
-  }
-}
-
-@keyframes design-selection-label {
-  0%,
-  28% {
-    opacity: 1;
-    transform: translateY(3px);
-  }
-  36%,
-  100% {
-    opacity: 0;
-    transform: translateY(-3px);
   }
 }
 
@@ -3466,7 +3434,6 @@ html[data-theme="light"] .contact-form select {
   }
 
   .hero-title-stage::before,
-  .hero-title-stage .hero-selection-label,
   .hero-title-stage .hero-selection-handle {
     animation: none;
   }
