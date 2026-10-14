@@ -56,7 +56,7 @@ setTheme(
 );
 
 const brandLinks = [...document.querySelectorAll(".brand")];
-const heroTitle = document.querySelector(".hero-title");
+const heroTitleStage = document.querySelector(".hero-title-stage");
 
 brandLinks.forEach(brand => {
   brand.addEventListener("click", event => {
@@ -68,9 +68,9 @@ brandLinks.forEach(brand => {
 function replayHeroTitle() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  heroTitle.classList.remove("is-revealing");
-  void heroTitle.offsetWidth;
-  heroTitle.classList.add("is-revealing");
+  heroTitleStage.classList.remove("is-revealing");
+  void heroTitleStage.offsetWidth;
+  heroTitleStage.classList.add("is-revealing");
 }
 
 replayHeroTitle();
