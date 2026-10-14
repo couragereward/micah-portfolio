@@ -113,12 +113,54 @@ select {
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
+  min-width: 38px;
+  min-height: 38px;
+  overflow: hidden;
 }
 
 .brand-logo {
   display: block;
   width: clamp(128px, 12vw, 158px);
   height: auto;
+}
+
+.brand-symbol {
+  display: block;
+  flex: 0 0 38px;
+  width: 38px;
+  height: auto;
+}
+
+.brand-wordmark {
+  display: block;
+  max-width: 0;
+  margin-left: 0;
+  overflow: hidden;
+  color: var(--text);
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .11em;
+  opacity: 0;
+  transform: translateX(-14px);
+  transition:
+    max-width .55s cubic-bezier(.2,.7,.2,1),
+    margin-left .55s cubic-bezier(.2,.7,.2,1),
+    opacity .3s ease,
+    transform .55s cubic-bezier(.2,.7,.2,1);
+}
+
+.brand[aria-expanded="true"] .brand-wordmark {
+  max-width: 150px;
+  margin-left: 8px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.brand:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 3px;
 }
 
 .navigation {
@@ -1769,6 +1811,15 @@ h3 {
   width: clamp(120px, 11vw, 145px);
 }
 
+.footer .brand-symbol {
+  flex-basis: 38px;
+  width: 38px;
+}
+
+.footer .brand-wordmark {
+  font-size: 13px;
+}
+
 #backToTop {
   width: 36px;
   height: 36px;
@@ -2116,8 +2167,8 @@ h3 {
     gap: 0;
   }
 
-  .header .brand-logo {
-    width: 132px;
+  .header .brand-wordmark {
+    font-size: 13px;
   }
 
   .hero-copy h1 {
@@ -2213,8 +2264,8 @@ h3 {
     flex-wrap: wrap;
   }
 
-  .footer .brand-logo {
-    width: 120px;
+  .footer .brand-wordmark {
+    font-size: 12px;
   }
 
   .footer > span {

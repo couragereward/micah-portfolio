@@ -30,9 +30,10 @@ function setTheme(theme, persist = true) {
 
   document.documentElement.dataset.theme = isLight ? "light" : "dark";
   document.querySelectorAll(
-    ".brand-logo, .about-logo, .preview-brand-logo, .experience-logo"
+    ".brand-logo, .brand-symbol, .about-logo, .preview-brand-logo, .experience-logo"
   ).forEach(logo => {
-    logo.src = `images/skylocity-logo-${isLight ? "light" : "dark"}.png`;
+    const isSymbol = logo.classList.contains("brand-symbol");
+    logo.src = `images/skylocity-${isSymbol ? "symbol" : "logo"}-${isLight ? "light" : "dark"}.png`;
   });
   themeToggle.setAttribute("aria-pressed", String(isLight));
   themeToggle.setAttribute(
@@ -53,6 +54,17 @@ setTheme(
   readSavedTheme() === "light" ? "light" : "dark",
   false
 );
+
+document.querySelectorAll(".brand").forEach(brand => {
+  brand.addEventListener("click", () => {
+    const isExpanded = brand.getAttribute("aria-expanded") !== "true";
+    brand.setAttribute("aria-expanded", String(isExpanded));
+    brand.setAttribute(
+      "aria-label",
+      `${isExpanded ? "Hide" : "Show"} SKYLOCITY wordmark and go home`
+    );
+  });
+});
 
 const projectData = {
   sharesat: {
